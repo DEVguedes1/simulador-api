@@ -62,3 +62,12 @@ def apagar_produto(id):
     dados= carregar_dados()
     dados["produtos"]=[p for p in dados["produtos"] if p["id"] != id]
     salvar_dados(dados)
+    
+def buscar_produto():
+    dados = carregar_dados()
+    id = int(input("Digite o id para buscar: "))
+    for produto in dados['produtos']:
+        if dados['produtos']['id'] == id:
+            print(f"Nome: {dados['produtos']['nome']}\nValor: {dados['produtos']['valor']}")
+            return
+    print("Usuário não encontrado.")
