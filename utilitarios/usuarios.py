@@ -1,4 +1,4 @@
-from bd import *
+from utilitarios.bd import *
 
 def adicionar_usuario(nome, senha):
     dados = carregar_dados()

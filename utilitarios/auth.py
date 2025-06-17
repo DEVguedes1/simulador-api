@@ -1,7 +1,7 @@
 import re
-from dados.bd import *
-from dados.produtos import *
-from dados.usuarios import *
+from utilitarios.bd import *
+from utilitarios.produtos import *
+from utilitarios.usuarios import *
 
 def validar_senha(senha):
     padrao = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'

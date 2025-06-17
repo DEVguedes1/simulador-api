@@ -1,5 +1,5 @@
-from dados.bd import *
-from dados.produtos import *
+from utilitarios.bd import *
+from utilitarios.produtos import *
 
 def cadastro_de_produtos():
     dados = carregar_dados()
@@ -71,3 +71,15 @@ def buscar_produto():
             print(f"Nome: {dados['produtos']['nome']}\nValor: {dados['produtos']['valor']}")
             return
     print("Usuário não encontrado.")
+    
+def login_user():
+
+    dados = carregar_dados()
+    nome = input("Nome: ")
+    senha = input("Senha: ")
+    if nome in dados['usuarios'] and dados['usuarios'][nome] == senha:
+        print(f"Bem-vindo, {nome}! Login realizado com sucesso.")
+        return True
+    else:
+        print("Usuário ou senha incorretos.")
+        return False

@@ -1,4 +1,4 @@
-from bd import *
+from utilitarios.bd import *
 
 contador_id = 0
 def cadastro_produto(produtos,nome,valor):
