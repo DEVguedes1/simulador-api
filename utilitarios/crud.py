@@ -1,4 +1,19 @@
 from dados.bd import *
+from dados.produtos import *
+
+def cadastro_de_produtos():
+    dados = carregar_dados()
+    nome = input("digite o nome do produto: ")
+    
+    try:
+        preco=float(input("preço: "))
+        
+    except ValueError:
+        print("formato invalido")
+
+    cadastro_produto(nome=nome,valor=preco)
+    salvar_dados(dados)
+    print("Produto cadastrado!")
 
 def listar_produtos():
     dados = carregar_dados()
